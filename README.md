@@ -21,7 +21,8 @@ requirements:
 * All fields are required.
 * Password validation:
 1. Should be a minimum of eight characters,
-2. Should contain lower and uppercase letters, o Should not contain user’s first or last name.
+2. Should contain lower and uppercase letters,
+3. Should not contain user’s first or last name.
 * Email should be validated but there are various ways of accomplishing this. So, show us what you consider as a proper email validation.
 * The form should send a POST request to https://demo-api.now.sh/users. The request body example:
 ```json
