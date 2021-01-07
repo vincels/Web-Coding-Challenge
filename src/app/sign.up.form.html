@@ -1,0 +1,51 @@
+<div class="sign-up-form">
+  <mat-card class="tp-card" [style.width.px]="width">
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+      <mat-grid-list [cols]="outerColumns" rowHeight="33rem" (window:resize)="onResize($event)">
+        <mat-grid-tile colspan="6">
+          <div class='nternal-mat-grid'>
+            <h2 class="headline">Create your FedEx Account</h2>
+            <mat-grid-list [cols]="innerColumns" rowHeight="4.5rem" gutterSize="1rem">
+              <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                  <mat-label>First name</mat-label>
+                  <input type="text" matInput placeholder="" formControlName="firstName">
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                  <mat-label>Last name</mat-label>
+                  <input type="text" matInput placeholder="" formControlName="lastName">
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile [colspan]="innerColumns">
+                <mat-form-field appearance="outline">
+                  <mat-label>Your email address</mat-label>
+                  <input type="text" matInput placeholder="" formControlName="email">
+                  <mat-hint>You'll need to confirm that this email belongs to you.</mat-hint>
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile [colspan]="innerColumns">
+                <mat-form-field appearance="outline">
+                  <mat-label>Password</mat-label>
+                  <input type="password" matInput placeholder="" formControlName="password">
+                  <mat-hint>Use 8 or more characters with a mix of both uppercase and lowercase letters. Should not
+                    contain your first or last name.</mat-hint>
+                </mat-form-field>
+              </mat-grid-tile>
+              <mat-grid-tile [colspan]="innerColumns">
+                <div class="primary-button">
+                  <button mat-flat-button color="primary" type="submit" class="btn"
+                    [disabled]="!signUpForm.valid">Next</button>
+                </div>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="4" rowHeight="40rem" *ngIf="currentWindowWidth > 900">
+          <img width="275rem" class="animation" src="assets/fedex-animation.gif" />
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
+  </mat-card>
+</div>

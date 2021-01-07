@@ -1,0 +1,9 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.sign-up-form {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 3rem 0 0 0;
+}
