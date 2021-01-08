@@ -3,6 +3,8 @@
 requirements:
     - node 14.15.4
 
+>install: npm i
+
 >build:
     npm run build
 
